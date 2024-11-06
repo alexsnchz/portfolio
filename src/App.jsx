@@ -4,6 +4,7 @@ import Tumbleweed from "./components/Tumbleweed";
 import Ground from "./components/Ground";
 import { Physics } from "@react-three/cannon";
 import { Suspense } from "react";
+import ReactGA from "react-ga4";
 
 function CameraLogger() {
   const { camera } = useThree();
@@ -18,6 +19,8 @@ function CameraLogger() {
 }
 
 function App() {
+  ReactGA.initialize("G-E1KBKQV2K4");
+
   return (
     <div className="App h-screen">
       <Canvas camera={{ position: [-5.19, 0.6, 6.8], fov: 50 }}>
